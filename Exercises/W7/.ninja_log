@@ -1,0 +1,20 @@
+# ninja log v5
+21	1002	6897757090110691	thirdparty/glfw3/src/CMakeFiles/glfw.dir/init.c.obj	42cd04ca11ba4b2a
+48	1037	6897757090456169	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_time.c.obj	2e92ae80aeb837c
+31	1045	6897757090506152	thirdparty/glfw3/src/CMakeFiles/glfw.dir/vulkan.c.obj	53f84f45437292c9
+13	1079	6897757090894279	thirdparty/glfw3/src/CMakeFiles/glfw.dir/context.c.obj	ec6c8a5fa9ad13be
+35	1122	6897757091304313	thirdparty/glfw3/src/CMakeFiles/glfw.dir/monitor.c.obj	99aab1535b28371b
+86	1159	6897757091694339	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	90aa7bd596e1ea4f
+39	1163	6897757091739584	thirdparty/glfw3/src/CMakeFiles/glfw.dir/window.c.obj	48ae18e880e719c
+9	1173	6897757091830518	thirdparty/glfw3/src/CMakeFiles/glfw.dir/input.c.obj	4b4fe35b8e126f70
+55	1181	6897757091922086	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	25a86c08276f892f
+60	1182	6897757091932132	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_init.c.obj	782528d07f8cf0a2
+1	1563	6897757095745057	CMakeFiles/colors.dir/colors.cpp.obj	4ec59941591360e4
+1046	1780	6897757097921065	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_thread.c.obj	572ea15b6afbe43c
+1037	1839	6897757098515282	thirdparty/glfw3/src/CMakeFiles/glfw.dir/wgl_context.c.obj	375517d9c054ad64
+1079	1843	6897757098555302	thirdparty/glfw3/src/CMakeFiles/glfw.dir/egl_context.c.obj	2f49cac5b67330cb
+1123	1881	6897757098932080	thirdparty/glfw3/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	d687b045c5e06aec
+1006	1906	6897757099173669	thirdparty/glfw3/src/CMakeFiles/glfw.dir/win32_window.c.obj	6ab618aa8abf2b1d
+1906	1988	6897757099999879	thirdparty/glfw3/src/libglfw3.a	c556e26c86362e5a
+5	2363	6897757103694187	CMakeFiles/colors.dir/thirdparty/GLee/GLee.c.obj	c9c4acd429b43930
+2363	2543	6897757105488548	colors.exe	f817184e7ca63598

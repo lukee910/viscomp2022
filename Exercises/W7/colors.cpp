@@ -4,7 +4,6 @@
 #include <string>
 #include <iostream>
 #include <math.h>
-#define GL_GLEXT_PROTOTYPES 1
 #include <GLee.h>
 #include <GLFW/glfw3.h>
 
