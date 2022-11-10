@@ -312,14 +312,37 @@ bool loadMeshObject(const string& meshFileName)
 	//===============================================================
 
 	// Create vertex buffer object and download vertex array
-	// [..code..]
+    cout << "Create vertex buffer" << endl;
+	glGenBuffers(1, &g_modelVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, g_modelVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * numVertices, pVertexArray, GL_STATIC_DRAW);
 
 	GLint location;
 	// bind Vertex shader per-vertex attributes
-	// [..code..]
+    size_t offset;
+
+    cout << "Init per vertex shader attributes" << endl;
+
+	location = glGetAttribLocation(g_shaderProgram, "position");
+    offset = offsetof(Vertex, pos);
+    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glEnableVertexAttribArray(location);
+
+    location = glGetAttribLocation(g_shaderProgram, "color_in");
+    offset = offsetof(Vertex, color);
+    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glEnableVertexAttribArray(location);
+
+    location = glGetAttribLocation(g_shaderProgram, "normal");
+    offset = offsetof(Vertex, normal);
+    glVertexAttribPointer(location, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glEnableVertexAttribArray(location);
 
 	// Create index buffer and download index data
-	// [..code..]
+    cout << "Create index buffer" << endl;
+    glGenBuffers(1, &g_modelIBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, g_modelIBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLshort) * g_modelIBOSize, pIndices, GL_STATIC_DRAW);
 
 
 	delete[] pIndices;
