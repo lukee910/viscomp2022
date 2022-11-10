@@ -271,14 +271,21 @@ bool loadMeshObject(const string& meshFileName)
 		GLfloat positionC[3];
 
 		// Get the positions of the triangles nodes
-		// [..code..]
+        for (int i = 0; i < 3; i++) {
+            positionA[i] = pVertexArray[pTriangleArray[triIndex].vtxIndexA].pos[i];
+            positionB[i] = pVertexArray[pTriangleArray[triIndex].vtxIndexB].pos[i];
+            positionC[i] = pVertexArray[pTriangleArray[triIndex].vtxIndexC].pos[i];
+        }
 
 		// Vectors for the calculation of the normal
 		GLfloat vec1[3];
 		GLfloat vec2[3];
 
 		// Calculate two difference vectors of the triangle
-		// [..code..]
+        for (int i = 0; i < 3; i++) {
+            vec1[i] = positionB[i] - positionA[i];
+            vec2[i] = positionC[i] - positionA[i];
+        }
 
 		// Calculate the normal vector: vector product between x and y
 		// [..code..]
@@ -325,17 +332,17 @@ bool loadMeshObject(const string& meshFileName)
 
 	location = glGetAttribLocation(g_shaderProgram, "position");
     offset = offsetof(Vertex, pos);
-    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid *)offset);
     glEnableVertexAttribArray(location);
 
     location = glGetAttribLocation(g_shaderProgram, "color_in");
     offset = offsetof(Vertex, color);
-    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glVertexAttribPointer(location, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid *)offset);
     glEnableVertexAttribArray(location);
 
     location = glGetAttribLocation(g_shaderProgram, "normal");
     offset = offsetof(Vertex, normal);
-    glVertexAttribPointer(location, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offset);
+    glVertexAttribPointer(location, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid *)offset);
     glEnableVertexAttribArray(location);
 
 	// Create index buffer and download index data
